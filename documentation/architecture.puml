@@ -1,20 +1,8 @@
 @startuml
-'!theme mars
-'!theme amiga
-'!theme cloudscape-design
-'!theme cerulean
-'!theme blueprint
-
-
-  ' Definición de las interfaces (pueden ir fuera de los paquetes o dentro si son internas)
 
 node PoliHuellas {
 
   component "Vista (/public)" as FrontendApp
-
-  'interface "API REST" as RESTAPI
-  'interface "API WebSocket" as WebSocketAPI
-
 
 
     component "Controlador (/controller)" as WebServer
@@ -30,14 +18,6 @@ node PoliHuellas {
     component "Manejador de Chat (/sockets)" as ChatHandler
 
   database "Base de Datos\n(MongoDB)" as Database
-
-  ' Conexiones entre componentes e interfaces
-  ' Connections between components and interfaces
-  'FrontendApp --> RESTAPI : usa
-  'FrontendApp --> WebSocketAPI : usa
-
-  'WebServer --( RESTAPI : provee
-  'ChatHandler --( WebSocketAPI : provee
 
   FrontendApp --> WebServer
   FrontendApp --> ChatHandler
