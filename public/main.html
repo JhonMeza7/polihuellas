@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Polihuellas - Adopta</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1>Bienvenido a Polihuellas 🐾</h1>
+    <button onclick="logout()">Cerrar sesión</button>
+    <button class="volver-menu" onclick="location.href='menu.html'">
+      ⬅️ Volver al menú
+    </button>
+
+    <!-- Secciones para modo=subir -->
+    <section id="seccion-subir">
+      <h2>Mis Mascotas</h2>
+      <div id="myPets"></div>
+
+      <h3>Registrar nueva mascota</h3>
+      <form id="petForm">
+        <input type="text" id="name" placeholder="Nombre" required />
+        <input type="text" id="species" placeholder="Especie" required />
+        <input type="number" id="age" placeholder="Edad" />
+        <input type="text" id="description" placeholder="Descripción" />
+        <input type="text" id="imageUrl" placeholder="URL de imagen" />
+        <button type="submit">Guardar</button>
+      </form>
+
+      <h3>Interesados en mis mascotas</h3>
+      <div id="likesRecibidos"></div>
+    </section>
+
+    <!-- Sección para modo=ver -->
+    <section id="seccion-ver">
+      <h2>Mascotas para Adoptar</h2>
+      <div id="availablePets"></div>
+    </section>
+    <section id="seccion-chats" style="display: none">
+      <h3>Chats Activos</h3>
+      <select id="chatSelect"></select>
+      <br />
+      <button id="btnIrChat" style="margin-top: 10px">Ir al chat</button>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
