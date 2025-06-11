@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #ffe0ec, #ffe8f0);
+  background: linear-gradient(to right, #fff2e0, #fff2e8);
   margin: 0;
   padding: 2rem;
   color: #333;
@@ -11,7 +11,7 @@ body {
 
 h1 {
   margin-bottom: 1rem;
-  color: #d63384;
+  color: #d66f33;
 }
 
 label {
@@ -56,7 +56,7 @@ input[type="text"] {
 }
 
 button {
-  background-color: #ff69b4;
+  background-color: #ff8569;
   color: white;
   border: none;
   cursor: pointer;
@@ -64,5 +64,5 @@ button {
 }
 
 button:hover {
-  background-color: #e055a0;
+  background-color: #e06555;
 }

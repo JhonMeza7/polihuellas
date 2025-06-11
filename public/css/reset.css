@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom right, #ff6b81, #ff9770);
+  background: linear-gradient(to bottom right, #ff9c6b, #ff7970);
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   height: 100vh;
@@ -49,7 +49,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff4b4b;
+  background-color: #ff5d4b;
 }
 
 #mensaje {

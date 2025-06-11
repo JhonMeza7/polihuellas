@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom right, #ff9a8b, #ff6a88);
+  background: linear-gradient(to bottom right, #ff9a8b, #ff886a);
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   text-align: center;
@@ -33,7 +33,7 @@ button {
   padding: 1rem;
   font-size: 1.1rem;
   background-color: #fff;
-  color: #ff4d6d;
+  color: #ff6e4d;
   border: none;
   border-radius: 12px;
   font-weight: bold;
