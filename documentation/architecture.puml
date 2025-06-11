@@ -1,0 +1,36 @@
+@startuml
+
+node PoliHuellas {
+
+  component "Vista (/public)" as FrontendApp
+
+
+    component "Controlador (/controller)" as WebServer
+
+    component "Enrutador (/routes)" as APIRouter
+
+    component "Middleware de Autenticación (/middleware)" as AuthMiddleware
+
+    component "Lógica de Negocio (/services)" as BusinessLogic
+
+    component "Acceso a Datos (/models)" as DataAccess
+
+    component "Manejador de Chat (/sockets)" as ChatHandler
+
+  database "Base de Datos\n(MongoDB)" as Database
+
+  FrontendApp --> WebServer
+  FrontendApp --> ChatHandler
+  WebServer --> APIRouter
+  APIRouter --> AuthMiddleware
+  APIRouter --> BusinessLogic
+
+  AuthMiddleware --> DataAccess
+
+  BusinessLogic --> DataAccess
+  ChatHandler --> BusinessLogic
+
+  DataAccess --> Database
+
+}
+@enduml
