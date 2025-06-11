@@ -1,0 +1,56 @@
+@startuml
+'!theme mars
+'!theme amiga
+'!theme cloudscape-design
+'!theme cerulean
+'!theme blueprint
+
+
+  ' Definición de las interfaces (pueden ir fuera de los paquetes o dentro si son internas)
+
+node PoliHuellas {
+
+  component "Vista (/public)" as FrontendApp
+
+  'interface "API REST" as RESTAPI
+  'interface "API WebSocket" as WebSocketAPI
+
+
+
+    component "Controlador (/controller)" as WebServer
+
+    component "Enrutador (/routes)" as APIRouter
+
+    component "Middleware de Autenticación (/middleware)" as AuthMiddleware
+
+    component "Lógica de Negocio (/services)" as BusinessLogic
+
+    component "Acceso a Datos (/models)" as DataAccess
+
+    component "Manejador de Chat (/sockets)" as ChatHandler
+
+  database "Base de Datos\n(MongoDB)" as Database
+
+  ' Conexiones entre componentes e interfaces
+  ' Connections between components and interfaces
+  'FrontendApp --> RESTAPI : usa
+  'FrontendApp --> WebSocketAPI : usa
+
+  'WebServer --( RESTAPI : provee
+  'ChatHandler --( WebSocketAPI : provee
+
+  FrontendApp --> WebServer
+  FrontendApp --> ChatHandler
+  WebServer --> APIRouter
+  APIRouter --> AuthMiddleware
+  APIRouter --> BusinessLogic
+
+  AuthMiddleware --> DataAccess
+
+  BusinessLogic --> DataAccess
+  ChatHandler --> BusinessLogic
+
+  DataAccess --> Database
+
+}
+@enduml
